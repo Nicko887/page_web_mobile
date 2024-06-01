@@ -1,0 +1,235 @@
+/* Réinitialisation des marges et des rembourrages et police par défaut */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Styles généraux */
+.header {
+    position: sticky;
+    top: 0;
+    background-color: #c5c5d3; /* Jaune */
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title a {
+    font-family: 'cursive', 'Relaway Extra Bold', sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+/* Navigation */
+.header nav ul,
+.footer-left ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.header nav ul li,
+.footer-left ul li {
+    margin-right: 0;
+}
+
+.header nav ul li a,
+.footer-left ul li a {
+    color: #2e2d29;
+    font-weight: bolder;
+}
+
+/* Partie Inscription et Connexion */
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.inscription {
+    margin-right: 0;
+}
+
+/* Recherche */
+.recherche-section {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-container {
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    display: inline-block;
+    text-align: left;
+    box-shadow: 0 1px 2px #696863;
+    width: 100%;
+}
+
+.search-container form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.search-container input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    flex: 1;
+    width: 100%;
+}
+
+.search-container button {
+    padding: 10px;
+    border: none;
+    background-color: #008000; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    border-radius: 0 20px 20px 0; /* Bord arrondi uniquement sur le côté droit */
+    cursor: pointer;
+}
+
+/* Zone de texte défilante */
+.scrolling-text-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.scrolling-text {
+    overflow: hidden;
+    height: 50px;
+}
+
+.scrolling-text p {
+    font-family: 'cursive', 'Courier New', Courier, monospace;
+    font-size: large;
+    color: #b32020;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* Animation pour faire apparaître et disparaître le texte */
+@keyframes fade-in-out {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Section principale */
+.main-content {
+    padding: 10px;
+}
+
+/* Section centrale */
+.central .medium-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.medium-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.left-column,
+.right-column {
+    background-color: #eee4c1;
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.right-column {
+    background-color: #ebbd1a;
+}
+
+/* Style pour le bouton de connexion et inscription */
+.login-button {
+    background-color: #4CAF50; /* Vert */
+    color: white;
+    border-radius: 10px;
+    border-color: #2e2d29;
+    border-width: 2px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+/* Styles pour le pied de page */
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #dfcfcf; /* Gris foncé */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.payment-methods {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.payment-logo {
+    margin: 10px;
+}
+
+.payment-logo img {
+    height: 24px;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #358a0e; /* Gris */
+}
+
+.footer-left ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-left ul li a {
+    font-weight: bold;
+    font-size: 18px;
+    color: #161111;
+}
+
+.footer-right {
+    margin-top: 10px;
+    color: #080807;
+}

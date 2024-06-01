@@ -1,0 +1,362 @@
+/* Réinitialisation des marges et des rembourrages et police par défaut */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Styles généraux */
+.header {
+    position: sticky;
+    top: 0;
+    background-color: #c5c5d3;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title a {
+    font-family: 'cursive', 'Relaway Extra Bold', sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+/* Navigation */
+.header nav ul,
+.footer-left ul {
+    list-style-type: none;
+    display: flex;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.header nav ul li,
+.footer-left ul li {
+    margin-right: 30px;
+}
+
+.header nav ul li:last-child,
+.footer-left ul li:last-child {
+    margin-right: 0;
+}
+
+.header nav ul li a,
+.footer-left ul li a {
+    color: #2e2d29;
+    font-weight: bolder;
+}
+
+/* Partie Inscription et Connexion */
+.section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.section nav ul li {
+    box-shadow: 0 2px 4px #0000000D;
+}
+
+.section nav ul li a {
+    text-decoration: none;
+}
+
+.inscription {
+    margin-right: 10px;
+}
+
+/* Recherche */
+.recherche-section {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-container {
+    margin-right: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    display: inline-block;
+    text-align: left;
+    box-shadow: 0 1px 2px #696863;
+}
+
+.search-container form {
+    display: flex;
+    align-items: center;
+}
+
+.search-container input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    flex: 1;
+}
+
+.search-container button {
+    padding: 10px;
+    border: none;
+    background-color: #008000;
+    color: white;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+}
+
+/* Zone de texte défilante */
+.scrolling-text-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
+    text-align: right;
+}
+
+.scrolling-text {
+    overflow: hidden;
+    height: 50px;
+}
+
+.scrolling-text p {
+    font-family: 'cursive', 'Courier New', Courier, monospace;
+    font-size: x-large;
+    color: #b32020;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* Animation pour faire apparaître et disparaître le texte */
+@keyframes fade-in-out {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Section principale */
+.main-content {
+    padding: 20px;
+}
+
+/* Section centrale */
+.central .medium-section {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.medium-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-column {
+    background-color: #eee4c1;
+    width: 100%;
+    height: 500px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 0;
+}
+
+.right-column {
+    background-color: #ebbd1a;
+    width: 100%;
+    height: 500px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 0;
+}
+
+/* Style pour le Bouton de connexion et inscription */
+.login-button {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 10px;
+    border-color: #2e2d29;
+    border-width: 2px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+/* Styles pour le pied de page */
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #dfcfcf;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Styles pour la partie gauche du pied de page reservée aux moyens de paiement */
+.payment-methods {
+    display: flex;
+    align-items: center;
+}
+
+.payment-logo {
+    margin-right: 10px;
+}
+
+.payment-logo img {
+    height: 24px;
+}
+
+/* Styles pour la partie centre gauche du pied de page */
+.footer-left {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    color: #358a0e;
+}
+
+/* Styles pour la liste dans la partie gauche */
+.footer-left ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+}
+
+/* Styles pour chaque élément de la liste */
+.footer-left ul li a {
+    font-weight: bold;
+    font-size: 18px;
+    color: #161111;
+}
+
+/* Styles pour la partie droite du pied de page */
+.footer-right {
+    margin-right: 30px;
+    color: #080807;
+}
+
+/* Media Queries pour rendre le site responsive */
+
+/* Pour les écrans de petite taille (smartphones) */
+@media only screen and (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        position: sticky;
+    }
+
+    .header nav ul,
+    .footer-left ul {
+        flex-direction: column;
+    }
+
+    .recherche-section {
+        flex-direction: column;
+    }
+
+    .search-container {
+        margin-right: 0;
+        margin-bottom: 10px;
+        box-shadow: 0 2px 4px #2e2d29;
+    }
+
+    .search-container input[type="text"] {
+        width: 100%;
+    }
+
+    .scrolling-text-container {
+        width: 100%;
+    }
+
+    .main-content {
+        display: flex;
+        justify-content: space-around;
+        padding: 20px;
+    }
+
+    .left-column,
+    .right-column {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+/* Pour les écrans de taille moyenne (tablettes) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .header nav ul,
+    .footer-left ul {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .search-container {
+        margin-right: 5px;
+    }
+
+    .scrolling-text-container {
+        width: 75%;
+    }
+
+    .left-column,
+    .right-column {
+        width: 48%;
+    }
+
+    .main-content {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
+
+/* Pour les écrans de grande taille (ordinateurs de bureau) */
+@media only screen and (min-width: 1025px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .header nav ul,
+    .footer-left ul {
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .search-container {
+        margin-right: 10px;
+    }
+
+    .scrolling-text-container {
+        width: 50%;
+    }
+
+    .left-column,
+    .right-column {
+        width: 48%;
+    }
+
+    .main-content {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
